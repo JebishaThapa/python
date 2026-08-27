@@ -1,6 +1,8 @@
 name = input("enter name: ")
-age = int(input("enter age: "))
-city = input("enter city: ")
-print("^"*50)
+
+max_length = max(len(name))
+padding = 4
 print("PERSONAL INTRODUCTION CARD".center(50, "-"))
-print(f"< name:  {name} >")
+print("^"*max_length* "^"*max_length)
+print(f"|", "name: {name}"   )
+print("^"* max_length)
