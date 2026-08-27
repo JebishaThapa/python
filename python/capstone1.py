@@ -1,0 +1,6 @@
+name = input("enter name: ")
+age = int(input("enter age: "))
+city = input("enter city: ")
+print("^"*50)
+print("PERSONAL INTRODUCTION CARD".center(50, "-"))
+print(f"< name:  {name} >")

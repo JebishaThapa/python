@@ -1,9 +1,12 @@
 name = input("enter a name: ")
 output = ""
-for index in name, enumerate(name):
-    
-    if index!= len(name)[-1]:
-        output += index + "-"
+for i in name:
+    if output == "":
+        output += i
     else:
-        output == index + ""
+        output += "-" + i
 print(output)
+
+
+variable = input("enter a string: ")
+print(*variable, sep="-")
