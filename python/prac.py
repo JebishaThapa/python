@@ -42,7 +42,7 @@ target - i
 
 
 """
-
+"""
 def twosums(nums, target):
     remaining={}
     for index, i in enumerate(nums):
@@ -50,14 +50,45 @@ def twosums(nums, target):
         if minus in remaining:
             return(remaining[minus],index)
         remaining[i]=index
-test_nums = [2, 7, 11, 15]
-test_target = 9
+testnums = [2, 7, 11, 15]
+testtarget = 9
 
 
-result = twosums(test_nums, test_target)
-print("The indices are:", result)
+result = twosums(testnums, testtarget)
+print(f"The index are: {result}")
 
 
 
+how this works
+for example  target = 9
+list[2,11,7]
+first time i=2, index = 0
+minus = 9-2=7
+is 7 in the remaining? no
+store remaining[2]=0
+now 
+minus 9-11=-2
+is -2 in the remaing? no
+store remaining[11]=1
+minus 9-7=2
+is 2 in the remaining? yes
+return (remaining[2], 2)
+(0,2)
+"""
 
+def twosums(nums, target):
+    remaining={}
+    for index, i in enumerate(nums):
+        minus = target - i
+        if minus in remaining:
+            return(remaining[minus], index)
+        remaining[i]=index
+
+
+testnums = [2, 7, 11, 15]
+testtarget = 9
+
+
+result = twosums(testnums, testtarget)
+print(f"The index are: {result}")
 
