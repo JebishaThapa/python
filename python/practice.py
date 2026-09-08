@@ -1,32 +1,7 @@
-
-"""
-lower = int(input("Enter the lower limit of the interval:"))
-upper = int(input("Enter the upper limit of the interval: "))
-for num in range(lower, upper+1):
-    order = len(str(num))
-    temp_num = num
-    sum = 0
-
-    while temp_num >0:
-        digit = temp_num% 10
-        sum += digit** order
-        temp_num//=10
-
-    if num == sum:
-        print(num)
-        """
-
-number = int(input("Enter a number: "))
+#write a python program to find the sum of natural numbers
+lower = int(input("Enter the lower bound: "))
+upper = int(input("Enter the upper bound: "))
 total_sum = 0
-count = len(str(number))
-for i in str(number):
-    
-    digit = int(i) ** count
-    total_sum += digit
-
- 
-
-if total_sum == number:
-    print(f"{number} is an armstrong number")
-else:
-    print(f"{number} is not an armstrong number")
+for i in range(lower, upper +1 ):
+    total_sum+=i
+print(total_sum)
