@@ -1,9 +1,11 @@
-#to split the array and add the first part to the endd
-def split(arr, k):
-    if k<=0 and k>=len(arr):
-        return arr
-    first_part = arr[:k]#means upto k which is 3
-    second_part = arr[k:]#means after k which is after 3 
-    result = second_part + first_part
+#add two matrices
+def add_matrices(mat1, mat2):
+    if len(mat1) != len(mat2) or len(mat1[0]) != len(mat2[0]):
+        return "matrices must have same dimension for addition"
+    result = []
+    for i in range(len(mat1)):
+        row = []
+        for j in range(len(mat1[0])):
+            row.append(mat1[i][j] + mat2[i][j])
+        result.append(row)
     return result
-print(split([1,2,3,4,5,6], 3))
