@@ -1,6 +1,12 @@
-my_str = input("Enter a string")
-words = [word.capitalize() for word in my_str.split()]
-words.sort()
-print("The sorted words are:")
-for word in words:
-    print(word)
+def prime_numbers(num):
+   
+    for i in num:
+        if i <= 1:
+            return False
+        
+        for nums in range(2, i):
+                if i%nums==0:
+                    return False
+    return True     
+print(prime_numbers([2,3,5,7]))               
+print(prime_numbers([2,3,0,8])) 
