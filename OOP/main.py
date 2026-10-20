@@ -1,10 +1,25 @@
-from car import Car
+#inheritance = allows a class to inherit attributes and methods for another class
 
-car1= Car("Mustang", "2024", "red", False)
-car2 = Car("Porshe", "1989", "yellow", True)
+class animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
 
-print(car1.model)
-print(car1.year)
-print(car1.color)
+    def eat(self):
+        print(f"{self.name} is eating")
 
-car2.drive()
+class Dog(animal):
+    pass    
+
+class Cat(animal):
+    pass
+
+class Mouse(animal):
+    pass
+
+dog = Dog("Scooby")
+cat = Cat("Garfeild")
+
+print(dog.name)
+print(dog.is_alive)
+dog.eat()
