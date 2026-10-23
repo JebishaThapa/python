@@ -10,8 +10,15 @@
 polymorphism = greek word means to have many forms or faces
 poly = many
 morphe = form 
+
+two ways
+inheritance
+duck typing = another way to achieve polymorphism besides inheritance 
+
+objects must have the minimum necessary attributes/methos
+"if it looks like a duck and quacks like a duck, it must be a duck"
 """
-from abc import ABC, abstractmethod
+"""from abc import ABC, abstractmethod
 class Shape:
     @abstractmethod
     def area(self):
@@ -45,4 +52,29 @@ class Triangle(Shape):
 shapes = [Circle(4), Square(5), Triangle(6, 7)]
 
 for shape in shapes:
-    print(f"{shape.area()} cm square.")
+    print(f"{shape.area()} cm square.")"""
+
+
+class Animal:
+    alive = True
+
+class Dog(Animal):
+    def speak(self):
+        print("wolf")
+
+class Cat(Animal):
+    def speak(self):
+        print("meow")
+
+class Car:
+
+    alive = True
+    def speak(self):
+        print("Honk")
+
+
+animals = [Dog(), Cat(), Car()]
+
+for animal in animals:
+    animal.speak()
+    print(animal.alive)
